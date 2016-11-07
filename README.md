@@ -8,6 +8,8 @@ After cloning the files, Open up a command window and type the following:
 
 This will install all the required node modules needed to get this basic app running.
 
+This step is not needed when using Heroku as that picks up the dependencies in the Packages.json file and installs on that platform.
+
 #### Links
 
 This integration can be deployed using Heroku. The Procfile in the repository is all that you will need to start the server.
