@@ -1,7 +1,11 @@
 // Dependencies
-var express = require('express');
-var app = express();
 var bodyParser = require('body-parser');
+var express = require('express');
+
+// Calling the Express module
+var app = express();
+
+// Using the JSON function of the body-parser module
 app.use(bodyParser.json()); 
 
 // Route that Hipchat enters
@@ -15,5 +19,8 @@ app.post("/hipchatbot", function(req, res) {
 
 });
 
+// Giving the app a port number to listen on - use 3000 by default 
 var port = Number(process.env.PORT || 3000);
+
+// Starts the app
 app.listen(port);
