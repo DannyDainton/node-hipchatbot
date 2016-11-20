@@ -16,4 +16,4 @@ app.post("/hipchatbot", function(req, res) {
 });
 
 var port = Number(process.env.PORT || 3000);
-var server = app.listen(port);
+app.listen(port);
