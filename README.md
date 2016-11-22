@@ -1,8 +1,8 @@
 # node-hipchatbot
-A basic bot for creating custom slash commands on Hipchat. 
+A very basic bot for creating custom slash commands on Hipchat using node.js. 
 
 #### Install dependencies
-After cloning the files, Open up a command window and type the following:
+After cloning the files, Open up a command window in the directory and type the following:
 
 `npm install`
 
@@ -10,7 +10,20 @@ This will install all the required node modules needed to get this basic app run
 
 This step is not needed when using Heroku as that picks up the dependencies in the Packages.json file and installs on that platform.
 
-#### Links
+#### Running the app locally
+
+Once you have the dependencies installed locally, use the `npm start` command to run the app. Using [Postman](https://www.getpostman.com/ "Postman") or your favorite REST client you can then POST a request to the local endpoint.
+
+POST Request:
+`localhost:3000/hipchatbot`
+
+JSON Body:
+`{ "item": { "message": { "message": "Test Sentence" } } }`
+
+Endpoint Response:
+`{ "message": "You entered the following text: Test Sentence" }`
+
+#### Deploying the app to Heroku
 
 This integration can be deployed using Heroku. The Procfile in the repository is all that you will need to start the server.
 
