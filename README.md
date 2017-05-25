@@ -35,6 +35,8 @@ These custom slash command bots can be added to Hipchat by following the details
 
 #### Try out the basic App in Hipchat
 
+![Alt text](/public/hipchatbot.png?raw=true "Hipchat Intergration")
+
 I've deployed the app to my Heroku platform so you can use this link as the entry point when practicing with your Hipchat instances: https://node-hipchatbot.herokuapp.com/hipchatbot
 
 The custom command intergrations in Hipchat take everything that has been typed and returns this in the message ("You entered the following text: /hipchatbot Test Sentence") which obviously isn't very helpful, you will need add some code to split/strip out that "/hipchatbot" part.
