@@ -18,11 +18,9 @@ app.post("/hipchatbot", function(req, res) {
   var message = req.body.item.message.message;
   console.log(message);
   
-  // Removing the /hipchatbot from the message text
-  var data = message.split(" ", 1);
   
   // Message posted back to Hipchat
-  res.json({ message: "You entered the following text: "+ data });
+  res.json({ message: "You entered the following text: "+ message });
 
 });
 
