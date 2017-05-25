@@ -8,6 +8,9 @@ var app = express();
 // Using the JSON function of the body-parser module
 app.use(bodyParser.json()); 
 
+// The app can use the public folder to serve static files
+app.use(express.static('public'));
+
 // Route that Hipchat enters
 app.post("/hipchatbot", function(req, res) {
 
