@@ -13,6 +13,7 @@ app.post("/hipchatbot", function(req, res) {
 
   // Gets the message value from the Hipchat JSON webhook
   var message = req.body.item.message.message;
+  console.log(message);
   
   // Message posted back to Hipchat
   res.json({ message: "You entered the following text: "+ message });
