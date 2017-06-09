@@ -39,7 +39,7 @@ https://blog.hipchat.com/2015/02/11/build-your-own-integration-with-hipchat/
 
 ![Alt text](/public/hipchatbot.png?raw=true "Hipchat Intergration")
 
-I've deployed the app to my Heroku platform so you can use this link as the entry point when practicing with your Hipchat instances: https://node-hipchatbot.herokuapp.com/hipchatbot
+I've deployed the app to my Heroku platform so you can use this link as the entry point when practicing with your Hipchat instances: https://node-hipchatbot.herokuapp.com/hipchatbot - By clicking this link, you will only be sending a GET request from your browser, this link needs to be added to a Hipchat intergration like in the image above.
 
 The custom command intergrations in Hipchat take everything that has been typed and returns this in the message ("You entered the following text: /hipchatbot Test Sentence") which obviously isn't very helpful, you will need add some code to split/strip out that "/hipchatbot" part.
 
