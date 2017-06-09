@@ -1,5 +1,5 @@
 # node-hipchatbot
-A very basic instructions for creating custom slash command intergrations in Hipchat using node.js. 
+A very basic set of instructions for creating custom slash command intergrations in Hipchat using node.js. 
 
 #### Install dependencies
 After cloning the files, Open up a command window in the cloned directory location and type the following:
@@ -10,7 +10,7 @@ This will install all the required node modules needed to get this basic app run
 
 #### Running the app locally
 
-Once you have the dependencies installed locally, use the `npm start` command to run the app. Using [Postman](https://www.getpostman.com/ "Postman") or your favorite REST client you can then POST a request to the local endpoint.
+Once you have the dependencies installed locally, use the `npm start` command to run the app. Using [Postman](https://www.getpostman.com/ "Postman") or your favourite REST client, you can POST a request to the local Endpoint.
 
 ![Alt text](/public/Local_Hipchatbot.png?raw=true "Postman Request")
 
