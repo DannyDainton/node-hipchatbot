@@ -12,8 +12,6 @@ This will install all the required node modules needed to get this basic app run
 
 Once you have the dependencies installed locally, use the `npm start` command to run the app. Using [Postman](https://www.getpostman.com/ "Postman") or your favourite REST client, you can POST a request to the local Endpoint.
 
-![Alt text](/public/Postman.png?raw=true "Postman Request")
-
 Request:
 POST `localhost:3000/hipchatbot`
 
@@ -22,10 +20,10 @@ Body:
 {
    "item":{
       "message":{
+         "from":{
+            "name":"Joe User"
+         },
          "message":"Test Sentence"
-      },
-      "from":{
-         "name":"Joe User"
       }
    }
 }
