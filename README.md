@@ -23,6 +23,9 @@ Body:
    "item":{
       "message":{
          "message":"Test Sentence"
+      },
+      "from":{
+         "name":"Joe User"
       }
    }
 }
@@ -31,7 +34,7 @@ Body:
 Response:
 ```
 {  
-   "message":"You entered the following text: Test Sentence"
+   "message": "Joe User entered the following text: Test Sentence"
 }
 ```
 
@@ -41,9 +44,9 @@ Response:
 
 I've deployed the app to my Heroku platform so you can use this link as the entry point when practicing with your own Hipchat instances: https://node-hipchatbot.herokuapp.com/hipchatbot - By clicking this link, you will only be sending a GET request from your browser, this link needs to be added to a Hipchat intergration like in the image above.
 
-![Alt text](/public/Hipchat_Message.png?raw=true "Hipchat Message")
+![Alt text](/public/User_Message.png?raw=true "Hipchat Message")
 
-The custom command intergrations in Hipchat take everything that has been typed and returns this in the message ("You entered the following text: /hipchatbot Test Sentence") which obviously isn't very helpful, you will need add some code to split/strip out that "/hipchatbot" part.
+The custom command intergrations in Hipchat take everything that has been typed and returns this in the message ("<Username> entered the following text: /hipchatbot Test Sentence") which obviously isn't very helpful, you will need add some code to split/strip out that "/hipchatbot" part.
 
 #### Deploying the app to Heroku
 
