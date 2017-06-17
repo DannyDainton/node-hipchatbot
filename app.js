@@ -17,7 +17,7 @@ app.post("/hipchatbot", (req, res) => {
 
   // Gets the message value from the Hipchat JSON webhook
   const message     = req.body.item.message.message
-  const name        = req.body.item.from.name
+  const name        = req.body.item.message.from.name
   
   // Adding some low level logging so that you can see the requests in the console
   winston.info(`Message Sent: ${message}`)
