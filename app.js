@@ -16,13 +16,15 @@ app.use(express.static('public'))
 app.post("/hipchatbot", (req, res) => {
 
   // Gets the message value from the Hipchat JSON webhook
-  const message = req.body.item.message.message
+  const message     = req.body.item.message.message
+  const name        = req.body.item.from.name
   
   // Adding some low level logging so that you can see the requests in the console
-  winston.info(`User Request: ${message}`)
+  winston.info(`Message Sent: ${message}`)
+  winston.info(`Sent By: ${name}`)
   
   // Message posted back to Hipchat
-  res.json({ message: `You entered the following text: ${message}` })
+  res.json({ message: `${name} entered the following text: ${message}` })
 
 })
 
@@ -31,3 +33,4 @@ const port = Number(process.env.PORT || 3000)
 
 // Starts the app
 app.listen(port)
+winston.info(`Server Started on port: ${port}`)
