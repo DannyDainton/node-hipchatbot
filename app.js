@@ -29,8 +29,14 @@ app.post("/hipchatbot", (req, res) => {
 })
 
 // Giving the app a port number to listen on - use 3000 by default 
-const port = Number(process.env.PORT || 3000)
+const port = Number(process.env.PORT || 7000)
 
 // Starts the app
-app.listen(port)
+if(!module.parent) { 
+  app.listen(port)
+}
+// Log that the server has started
 winston.info(`Server Started on port: ${port}`)
+
+// Exporting the app so that it can be used in the tests
+module.exports = app

@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "test": "NODE_ENV=test mocha ./test/*.js"
   },
   "author": "",
   "license": "ISC",
@@ -12,6 +13,10 @@
     "express": "^4.13.3",
     "winston": "^2.3.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2",
+    "supertest": "^3.0.0"
+  },
   "description": ""
 }
