@@ -1,4 +1,4 @@
-https://travis-ci.org/DannyDainton/node-hipchatbot.svg?branch=master
+[![Build Status](https://travis-ci.org/DannyDainton/node-hipchatbot.svg?branch=master)](https://travis-ci.org/DannyDainton/node-hipchatbot)
 
 # node-hipchatbot
 This is an extended version of the hipchatbot-basic code.
