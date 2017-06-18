@@ -1,5 +1,5 @@
-describe('Request sent to /hipchatbot', () => {
-    it('should post a message and get a 200 response', (done) => {
+describe('Request sent to /hipchatbot', function() {
+    it('should post a message and get a 200 response', function(done) {
         request
             .post('/hipchatbot')
             .send({ "item":{ "message":{ "from":{ "name":"Joe User" }, "message":"Test Sentence" } }})
@@ -13,8 +13,8 @@ describe('Request sent to /hipchatbot', () => {
     })
 })
 
-describe('Request to the wrong route', () => {
-    it('should return a 404 response', (done) => {
+describe('Request to the wrong route', function() {
+    it('should return a 404 response', function(done) {
         request
             .post('/hipchat')
             .expect(404)
@@ -25,8 +25,8 @@ describe('Request to the wrong route', () => {
     })
 })
 
-describe('Request with the wrong method', () => {
-    it('should return a 404 response', (done) => {
+describe('Request with the wrong method', function() {
+    it('should return a 404 response', function(done) {
         request
             .get('/hipchatbot')
             .expect(404)
@@ -37,8 +37,8 @@ describe('Request with the wrong method', () => {
     })
 })
 
-describe('Request with the wrong header', () => {
-    it('should get a 500 response', (done) => {
+describe('Request with the wrong header', function() {
+    it('should get a 500 response', function(done) {
         request
             .post('/hipchatbot')
             .set('Content-Type', 'application/text')
@@ -50,8 +50,8 @@ describe('Request with the wrong header', () => {
     })
 })
 
-describe('Request sent without a message body', () => {
-    it('should get a 500 response', (done) => {
+describe('Request sent without a message body', function() {
+    it('should get a 500 response', function(done) {
         request
             .post('/hipchatbot')
             .set('Content-Type', 'application/json')
