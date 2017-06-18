@@ -1,3 +1,5 @@
+https://travis-ci.org/DannyDainton/node-hipchatbot.svg?branch=master
+
 # node-hipchatbot
 This is an extended version of the hipchatbot-basic code.
 
