@@ -5,7 +5,7 @@ describe('Request sent to /hipchatbot', function() {
     it('should post a message and get a 200 response', function(done) {
         request
             .post('/hipchatbot')
-            .send(`{ "item":{ "message":{ "from":{ "name": "Test User" }, "message": ${randomWord} } } }`)
+            .send(`{ "item":{ "message":{ "from":{ "name": "Test User" }, "message": "${randomWord}" } } }`)
             .set('Content-Type', 'application/json')
             .expect(200)
             .expect(`{"message":"Test User entered the following text: ${randomWord}"}` )
