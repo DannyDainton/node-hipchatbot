@@ -1,3 +1,5 @@
+const faker = require('faker')
+
 describe('Request sent to /hipchatbot', function() {
     it('should post a message and get a 200 response', function(done) {
         request
