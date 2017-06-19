@@ -4,7 +4,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "test": "NODE_ENV=test mocha ./test/*.js"
+    "test": "NODE_ENV=test mocha ./test/*.js",
+    "coverage": "istanbul cover _mocha ./test/*.js"
   },
   "author": "",
   "license": "ISC",
