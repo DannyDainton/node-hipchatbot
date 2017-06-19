@@ -6,7 +6,7 @@ describe('Request sent to /hipchatbot', function() {
             .post('/hipchatbot')
             let randomName = faker.name.findName()
             let randomWord = faker.lorem.word()
-            .send({ "item":{ "message":{ "from":{ "name": randomName }, "message": randomWord } }})
+            .send(`{ "item":{ "message":{ "from":{ "name": ${randomName} }, "message": ${randomWord} } }}`)
             .set('Content-Type', 'application/json')
             .expect(200)
             .expect(`{"message":"Joe User entered the following text: Test Sentence"}` )
