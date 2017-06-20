@@ -1,6 +1,6 @@
 const faker      = require('faker')
 const randomWord = faker.random.word()
-const randomName = faker.findName()
+const randomName = faker.name.findName()
 
 describe('Request sent to /hipchatbot', function() {
     it('should post a message and get a 200 response', function(done) {
