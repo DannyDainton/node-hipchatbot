@@ -1,14 +1,15 @@
 const faker      = require('faker')
 const randomWord = faker.random.word()
+const randomName = faker.findName()
 
 describe('Request sent to /hipchatbot', function() {
     it('should post a message and get a 200 response', function(done) {
         request
             .post('/hipchatbot')
-            .send(`{ "item":{ "message":{ "from":{ "name": "Test User" }, "message": "${randomWord}" } } }`)
+            .send(`{ "item":{ "message":{ "from":{ "name": "${randomName}" }, "message": "${randomWord}" } } }`)
             .set('Content-Type', 'application/json')
             .expect(200)
-            .expect(`{"message":"Test User entered the following text: ${randomWord}"}` )
+            .expect(`{"message":"${randomName} entered the following text: ${randomWord}"}` )
             .end(function (err, res) {
                 if (err) throw err
                 done()
